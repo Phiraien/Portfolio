@@ -4,28 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phi Raien | Portfolio</title>
+  <meta name="description" content="Phi Raien — Engineering student, developer, and builder. Systems, automation, game dev, and everything in between." />
+  <meta property="og:title" content="Phi Raien | Portfolio" />
+  <meta property="og:description" content="Engineering student, developer, and builder." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://phiraien.github.io/Portfolio/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <nav>
     <div class="container nav-inner">
-      <span class="logo">PR</span>
+      <a href="#" class="logo" aria-label="Home">PR</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <section id="hero">
     <div class="container hero-content">
+      <div class="hero-badge">Building things, breaking things</div>
       <h1>Phi Raien</h1>
       <p class="tagline">Engineering Student &middot; Developer &middot; Builder</p>
-      <p class="sub">I learn by building things and breaking them.</p>
+      <p class="sub">I learn by building things and breaking them — every failure teaches something new.</p>
       <div class="hero-links">
-        <a href="https://github.com/Phiraien" target="_blank" class="btn">GitHub</a>
+        <a href="https://github.com/Phiraien" target="_blank" rel="noopener" class="btn">GitHub</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
@@ -41,7 +49,7 @@
         </div>
         <div class="about-stats">
           <div class="stat"><span class="stat-num">5+</span><span>Projects Built</span></div>
-          <div class="stat"><span class="stat-num">3</span><span>Languages</span></div>
+          <div class="stat"><span class="stat-num">5</span><span>Languages</span></div>
           <div class="stat"><span class="stat-num">∞</span><span>Curiosity</span></div>
         </div>
       </div>
@@ -50,7 +58,7 @@
 
   <section id="skills">
     <div class="container">
-      <h2>Skills & Tools</h2>
+      <h2>Skills &amp; Tools</h2>
       <div class="skills-grid">
         <div class="skill-cat">
           <h3>Languages</h3>
@@ -72,7 +80,7 @@
           </ul>
         </div>
         <div class="skill-cat">
-          <h3>Backend & DB</h3>
+          <h3>Backend &amp; DB</h3>
           <ul>
             <li>Oracle</li>
             <li>MySQL</li>
@@ -94,24 +102,32 @@
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <div class="project-card">
-        <h3>OS Scheduling Algorithms</h3>
-        <p>Implementation of operating system scheduling algorithms — FCFS, SJF, Round Robin, and Priority Scheduling — with performance comparison.</p>
-        <span class="tag">C</span>
-        <span class="tag">Algorithms</span>
-        <a href="https://github.com/Phiraien/OS-Scheduling-algos" target="_blank">View on GitHub &rarr;</a>
-      </div>
-      <div class="project-card">
-        <h3>Java-Nomies</h3>
-        <p>A collection of Java projects and exercises exploring object-oriented programming concepts through practical implementations.</p>
-        <span class="tag">Java</span>
-        <span class="tag">OOP</span>
-        <a href="https://github.com/Phiraien/Java-Nomies" target="_blank">View on GitHub &rarr;</a>
-      </div>
-      <div class="project-card">
-        <h3>NewGen</h3>
-        <p>Private repository — currently under development.</p>
-        <span class="tag">Private</span>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="card-top">
+            <h3>OS Scheduling Algorithms</h3>
+            <span class="tag">C</span>
+            <span class="tag">Algorithms</span>
+          </div>
+          <p>Implementation of operating system scheduling algorithms — FCFS, SJF, Round Robin, and Priority Scheduling — with performance comparison.</p>
+          <a href="https://github.com/Phiraien/OS-Scheduling-algos" target="_blank" rel="noopener" class="card-link">View on GitHub &rarr;</a>
+        </div>
+        <div class="project-card">
+          <div class="card-top">
+            <h3>Java-Nomies</h3>
+            <span class="tag">Java</span>
+            <span class="tag">OOP</span>
+          </div>
+          <p>A collection of Java projects and exercises exploring object-oriented programming concepts through practical implementations.</p>
+          <a href="https://github.com/Phiraien/Java-Nomies" target="_blank" rel="noopener" class="card-link">View on GitHub &rarr;</a>
+        </div>
+        <div class="project-card">
+          <div class="card-top">
+            <h3>NewGen</h3>
+            <span class="tag tag-private">Private</span>
+          </div>
+          <p>Private repository — currently under development.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -119,16 +135,19 @@
   <section id="contact">
     <div class="container">
       <h2>Get in Touch</h2>
-      <p class="contact-text">Have a project in mind? Let's talk.</p>
+      <p class="contact-text">Have a project in mind or just want to say hi? Let's talk.</p>
       <div class="contact-links">
         <a href="mailto:kerala.emperor2@gmail.com" class="btn">Email Me</a>
-        <a href="https://github.com/Phiraien" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="https://github.com/Phiraien" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 Phi Raien.</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Phi Raien.</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
