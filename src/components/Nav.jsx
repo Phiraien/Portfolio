@@ -1,31 +1,24 @@
-export default function Nav({ activeSection }) {
+import { NavLink } from 'react-router-dom';
+
+export default function Nav() {
   const links = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/skills', label: 'Skills' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
     <nav>
       <div className="container nav-inner">
-        <a href="#" className="logo" aria-label="Home" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          PR
-        </a>
+        <NavLink to="/" className="logo" aria-label="Home">PR</NavLink>
         <ul className="nav-links">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={`nav-link${activeSection === l.href.slice(1) ? ' active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const el = document.querySelector(l.href);
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
+            <li key={l.to}>
+              <NavLink to={l.to} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`} end={l.to === '/'}>
                 {l.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
