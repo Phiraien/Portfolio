@@ -132,6 +132,25 @@ nav {
   font-size: 1.15rem;
   color: var(--text-dim) !important;
 }
+.hero-brief {
+  max-width: 65ch;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+.hero-brief p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.hero-brief strong {
+  color: var(--accent);
+}
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
 .section-title {
   margin-bottom: 56px;
 }

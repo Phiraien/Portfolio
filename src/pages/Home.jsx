@@ -1,59 +1,43 @@
 import GradientText from '../components/GradientText';
 import '../components/GradientText.css';
-import ShinyText from '../components/ShinyText';
-import '../components/ShinyText.css';
-import RotatingText from '../components/RotatingText';
-import '../components/RotatingText.css';
-import Orb from '../components/Orb';
-import Noise from '../components/Noise';
-import '../components/Noise.css';
 
 export default function Home() {
   return (
-    <>
-      <Orb
-        hue={240}
-        hoverIntensity={0.3}
-        rotateOnHover={true}
-        backgroundColor="#120F17"
-      />
-      <Noise
-        patternSize={200}
-        patternScaleX={1}
-        patternScaleY={1}
-        patternRefreshInterval={4}
-        patternAlpha={12}
-      />
-      <section id="hero" className="page-hero">
-        <div className="container hero-content">
-          <GradientText
-            colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}
-            animationSpeed={6}
-            direction="horizontal"
-            className="hero-name"
-          >
-            Phi Raien
-          </GradientText>
+    <section id="hero" className="page-hero">
+      <div className="container hero-content">
+        <GradientText
+          colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}
+          animationSpeed={6}
+          direction="horizontal"
+          className="hero-name"
+        >
+          Phi Raien
+        </GradientText>
 
-          <div style={{ marginTop: 24, marginBottom: 16 }}>
-            <RotatingText
-              texts={['Engineering Student', 'Developer', 'Builder', 'Problem Solver']}
-              mainClassName="rotating-role"
-              staggerDuration={0.03}
-              staggerFrom="first"
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              rotationInterval={3000}
-            />
-          </div>
+        <p className="tagline" style={{ marginTop: 16 }}>
+          Engineering Student &middot; Developer &middot; Builder
+        </p>
 
-          <ShinyText
-            text="I learn by building things and breaking them. Every failure teaches something new."
-            disabled={false}
-            speed={3}
-            className="hero-sub"
-          />
+        <p className="sub">
+          I learn by building things and breaking them. Every failure teaches something new.
+        </p>
+
+        <div className="hero-brief">
+          <p>
+            Currently deep in systems architecture, automation, and local AI — working daily with{' '}
+            <strong>PHP</strong>, <strong>Python</strong>, <strong>Java</strong>, databases, and game dev with Godot.
+          </p>
+          <p>
+            Every project is a chance to understand how systems fit together — from databases and APIs to
+            agent loops and deployment pipelines. I don't copy-paste solutions; I tear them apart first.
+          </p>
         </div>
-      </section>
-    </>
+
+        <div className="hero-actions">
+          <a href="/Portfolio/projects" className="btn">View Projects</a>
+          <a href="/Portfolio/about" className="btn btn-outline">About Me</a>
+        </div>
+      </div>
+    </section>
   );
 }
