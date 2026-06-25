@@ -1,4 +1,6 @@
 import SpotlightCard from '../components/SpotlightCard';
+import BorderGlow from '../components/BorderGlow';
+import '../components/BorderGlow.css';
 
 const projects = [
   {
@@ -28,20 +30,22 @@ export default function Projects() {
         <h2>Projects</h2>
         <div className="projects-grid">
           {projects.map((p) => (
-            <SpotlightCard key={p.title} className="project-card">
-              <div className="card-top">
-                <h3>{p.title}</h3>
-                {p.tags.map((t) => (
-                  <span className={`tag${t === 'Private' ? ' tag-private' : ''}`} key={t}>{t}</span>
-                ))}
-              </div>
-              <p>{p.desc}</p>
-              {p.url && (
-                <a href={p.url} target="_blank" rel="noopener" className="card-link">
-                  View on GitHub &rarr;
-                </a>
-              )}
-            </SpotlightCard>
+            <BorderGlow key={p.title} className="project-card-wrap">
+              <SpotlightCard className="project-card">
+                <div className="card-top">
+                  <h3>{p.title}</h3>
+                  {p.tags.map((t) => (
+                    <span className={`tag${t === 'Private' ? ' tag-private' : ''}`} key={t}>{t}</span>
+                  ))}
+                </div>
+                <p>{p.desc}</p>
+                {p.url && (
+                  <a href={p.url} target="_blank" rel="noopener" className="card-link">
+                    View on GitHub &rarr;
+                  </a>
+                )}
+              </SpotlightCard>
+            </BorderGlow>
           ))}
         </div>
       </div>
