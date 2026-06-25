@@ -16,18 +16,18 @@ Personal portfolio website for **Phi Raien** — engineering student, developer,
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (Flexbox, Grid, responsive design)
-- Vanilla JavaScript (IntersectionObserver, smooth scroll)
+- **React 19** + **Vite 6**
+- CSS3 (Flexbox, Grid, CSS variables, dark mode via `prefers-color-scheme`)
+- Vanilla JS (IntersectionObserver)
 
-## Run Locally
+## Development
 
 ```bash
-git clone https://github.com/Phiraien/Portfolio.git
-open index.html
+npm install
+npm run dev     # dev server
+npm run build   # production build
+npm run deploy  # build + push to gh-pages
 ```
-
-No build step or dependencies — just open the file.
 
 ## License
 
