@@ -11,16 +11,16 @@ export default function About() {
           </div>
           <div className="about-stats">
             <div className="stat">
-              <span className="stat-num">~30min</span>
-              <span>Daily Build Time</span>
-            </div>
-            <div className="stat">
               <span className="stat-num">5+</span>
               <span>Projects Built</span>
             </div>
             <div className="stat">
-              <span className="stat-num">3</span>
-              <span>Years Tinkering</span>
+              <span className="stat-num">3+</span>
+              <span>Years Building</span>
+            </div>
+            <div className="stat">
+              <span className="stat-num">∞</span>
+              <span>Curiosity</span>
             </div>
           </div>
         </div>
