@@ -295,6 +295,47 @@ h2 {
   color: var(--text-muted);
 }
 
+/* Source: React Bits - SpotlightCard */
+.card-spotlight {
+  position: relative;
+  border-radius: 16px;
+  background: var(--card-bg);
+  padding: 36px;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(74, 74, 224, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+.card-spotlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px var(--shadow);
+}
+
+.card-spotlight > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* Projects */
 .projects-grid {
   display: grid;
@@ -303,16 +344,11 @@ h2 {
 }
 .project-card {
   background: var(--card-bg);
-  padding: 36px;
   border-radius: 16px;
   box-shadow: 0 4px 16px var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
-}
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px var(--shadow);
+  height: 100%;
 }
 .project-card .card-top {
   margin-bottom: 16px;

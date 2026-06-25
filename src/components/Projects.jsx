@@ -1,3 +1,5 @@
+import SpotlightCard from './SpotlightCard';
+
 const projects = [
   {
     title: 'OS Scheduling Algorithms',
@@ -26,7 +28,7 @@ export default function Projects() {
         <h2>Projects</h2>
         <div className="projects-grid">
           {projects.map((p) => (
-            <div className="project-card" key={p.title}>
+            <SpotlightCard key={p.title} className="project-card">
               <div className="card-top">
                 <h3>{p.title}</h3>
                 {p.tags.map((t) => (
@@ -39,7 +41,7 @@ export default function Projects() {
                   View on GitHub &rarr;
                 </a>
               )}
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>
