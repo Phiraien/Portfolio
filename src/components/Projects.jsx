@@ -19,6 +19,12 @@ const projects = [
     tags: ['Private'],
     url: null,
   },
+  {
+    title: 'FileSync',
+    desc: 'Premium dark-themed cloud file manager with drag & drop uploads, Supabase auth, real-time search, grid/list views, storage analytics, and Framer Motion animations.',
+    tags: ['Next.js', 'React', 'Tailwind', 'Supabase'],
+    url: 'https://github.com/Phiraien/filesync-app',
+  },
 ];
 
 export default function Projects() {
