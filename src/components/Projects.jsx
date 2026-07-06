@@ -15,15 +15,21 @@ const projects = [
   },
   {
     title: 'NewGen',
-    desc: 'Private repository — currently under development.',
-    tags: ['Private'],
-    url: null,
+    desc: 'PHP e-commerce platform with checkout system, user authentication, product management, and game store integration.',
+    tags: ['PHP', 'MySQL', 'E-Commerce'],
+    url: 'https://github.com/Phiraien/NewGen',
   },
   {
     title: 'FileSync',
     desc: 'Premium dark-themed cloud file manager with drag & drop uploads, Supabase auth, real-time search, grid/list views, storage analytics, and Framer Motion animations.',
     tags: ['Next.js', 'React', 'Tailwind', 'Supabase'],
     url: 'https://github.com/Phiraien/filesync-app',
+  },
+  {
+    title: 'Biodata Website',
+    desc: 'Personal biodata and resume website — clean, responsive design built with HTML and CSS.',
+    tags: ['HTML', 'CSS'],
+    url: 'https://github.com/Phiraien/biodata-website',
   },
 ];
 
