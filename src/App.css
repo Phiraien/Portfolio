@@ -406,6 +406,11 @@ h2 {
 .project-card .card-link:hover {
   text-decoration: underline;
 }
+.project-link-wrap {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 .tag {
   display: inline-block;
   padding: 6px 16px;

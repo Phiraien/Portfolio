@@ -62,22 +62,24 @@ export default function Projects() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <BorderGlow className="project-card-wrap">
-                <SpotlightCard className="project-card">
-                  <div className="card-top">
-                    <h3>{p.title}</h3>
-                    {p.tags.map((t) => (
-                      <span className="tag" key={t}>{t}</span>
-                    ))}
-                  </div>
-                  <p>{p.desc}</p>
-                  {p.url && (
-                    <a href={p.url} target="_blank" rel="noopener" className="card-link">
-                      View on GitHub &rarr;
-                    </a>
-                  )}
-                </SpotlightCard>
-              </BorderGlow>
+              <a href={p.url || '#'} target="_blank" rel="noopener" className="project-link-wrap">
+                <BorderGlow className="project-card-wrap">
+                  <SpotlightCard className="project-card">
+                    <div className="card-top">
+                      <h3>{p.title}</h3>
+                      {p.tags.map((t) => (
+                        <span className="tag" key={t}>{t}</span>
+                      ))}
+                    </div>
+                    <p>{p.desc}</p>
+                    {p.url && (
+                      <span className="card-link">
+                        View on GitHub &rarr;
+                      </span>
+                    )}
+                  </SpotlightCard>
+                </BorderGlow>
+              </a>
             </motion.div>
           ))}
         </div>
