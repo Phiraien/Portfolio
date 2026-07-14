@@ -1,19 +1,19 @@
 import { NavLink } from 'react-router-dom';
 
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/skills', label: 'Skills' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/pmvikas', label: 'PMVikas' },
-  { to: '/contact', label: 'Contact' },
-];
-
 export default function Nav() {
+  const links = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/skills', label: 'Skills' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/pmvikas', label: 'PMVikas' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
   return (
     <nav>
       <div className="container nav-inner">
-        <NavLink to="/" className="logo" aria-label="Home">PR</NavLink>
+        <NavLink to="/" className="logo" aria-label="Home">Phi Raien</NavLink>
         <ul className="nav-links">
           {links.map((l) => (
             <li key={l.to}>
