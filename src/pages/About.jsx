@@ -38,7 +38,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
               >
-                6+
+                4+
               </motion.span>
               <span>Projects Built</span>
             </div>

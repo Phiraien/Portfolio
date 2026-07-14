@@ -102,10 +102,9 @@ nav {
   z-index: 1;
 }
 .page-section {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 0;
+  padding: 120px 0 100px;
   position: relative;
   z-index: 1;
 }
@@ -237,9 +236,6 @@ nav {
 }
 
 /* Sections */
-section {
-  padding: 120px 0;
-}
 h2 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -509,7 +505,7 @@ button:focus-visible {
   .nav-links { gap: 14px; }
   .nav-links a { font-size: 0.85rem; }
   .about-stats { grid-template-columns: repeat(3, 1fr); }
-  section { padding: 80px 0; }
+  .page-section { padding: 80px 0 60px; }
   .projects-grid { grid-template-columns: 1fr; }
   h2 { font-size: 1.75rem; margin-bottom: 40px; }
   .pmvikas-grid { grid-template-columns: 1fr; }

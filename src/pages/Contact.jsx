@@ -4,6 +4,10 @@ import '../components/ShinyText.css';
 import BorderGlow from '../components/BorderGlow';
 import '../components/BorderGlow.css';
 
+// Email obfuscated: base64 of "mailto:kerala.emperor2@gmail.com"
+const EMAIL_HREF = atob('bWFpbHRvOmtlcmFsYS5lbXBlcm9yMkBnbWFpbC5jb20=');
+const EMAIL_TEXT = atob('a2VyYWxhLmVtcGVyb3IyQGdtYWlsLmNvbQ==');
+
 export default function Contact() {
   return (
     <section id="contact" className="page-section">
@@ -30,7 +34,7 @@ export default function Contact() {
         >
           <BorderGlow className="contact-card">
             <div className="contact-links">
-              <a href="mailto:kerala.emperor2@gmail.com" className="btn">Email Me</a>
+              <a href={EMAIL_HREF} className="btn">{EMAIL_TEXT}</a>
               <a href="https://github.com/Phiraien" target="_blank" rel="noopener" className="btn btn-outline">GitHub</a>
             </div>
           </BorderGlow>
