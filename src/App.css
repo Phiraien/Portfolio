@@ -242,9 +242,10 @@ h2 {
 /* About */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: 760px;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 960px;
   margin: 0 auto;
 }
 .about-text p {
@@ -279,53 +280,50 @@ h2 {
 }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  max-width: 480px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .stat {
-  text-align: center;
-  padding: 18px 8px;
+  text-align: left;
+  padding: 18px 22px;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 14px;
   transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
 .stat:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
 }
 .stat-num {
-  display: block;
   font-size: 1.8rem;
   font-weight: 800;
   background: linear-gradient(120deg, #6b6bf0, #ff9ffc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 4px;
+  margin-bottom: 0;
+  min-width: 64px;
 }
 .stat span:last-child {
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   color: var(--text-dim);
 }
 
 /* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-}
-.magnet-wrap {
-  display: block;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .skill-cat {
   padding: 0;
-}
-.border-glow-card.skill-cat {
-  box-shadow: none;
 }
 .skill-cat .border-glow-inner {
   padding: 28px;
@@ -540,10 +538,9 @@ button:focus-visible {
   body { font-size: 16px; }
   .hero-name .text-content { font-size: 2.75rem !important; }
   .about-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
   .nav-links { gap: 14px; }
   .nav-links a { font-size: 0.85rem; }
-  .about-stats { grid-template-columns: repeat(3, 1fr); }
   .page-section { padding: 80px 0 60px; }
   .projects-grid { grid-template-columns: 1fr; }
   h2 { font-size: 1.75rem; margin-bottom: 40px; }
@@ -556,9 +553,6 @@ button:focus-visible {
   .tagline { font-size: 1.1rem; }
   .nav-links a { font-size: 0.8rem; }
   .nav-links { gap: 10px; }
-  .about-stats { gap: 12px; grid-template-columns: repeat(3, 1fr); }
-  .stat { padding: 20px 12px; }
-  .about-stats { gap: 8px; }
   .hero-links { flex-direction: column; align-items: center; }
   .btn { width: 100%; max-width: 260px; text-align: center; }
   .footer-inner { flex-direction: column; gap: 16px; }
