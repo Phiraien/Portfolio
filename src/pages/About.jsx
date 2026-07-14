@@ -1,4 +1,8 @@
 import { motion } from 'motion/react';
+import BorderGlow from '../components/BorderGlow';
+import '../components/BorderGlow.css';
+
+const focuses = ['Systems', 'Local AI', 'Automation', 'Game Dev'];
 
 export default function About() {
   return (
@@ -19,53 +23,53 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p>I'm an engineering student who learns by building things and breaking them. I don't follow tutorials — I take systems apart to see how they work, then rebuild them better.</p>
-            <p>Right now I'm deep in systems architecture, automation, and local AI. I work daily with PHP, Python, and Go, and tinker with game dev in Godot 4.5. My obsession is a self-hosted "AI OS" that runs fully on my own machine.</p>
-            <p>Off-screen I'm usually optimizing for the two things that matter: <strong>time</strong> and <strong>understanding</strong>.</p>
+            <p>
+              I'm an engineering student who learns by <span className="hl">building things and breaking them</span>.
+              I don't follow tutorials — I take systems apart to see how they work, then rebuild them better.
+            </p>
+            <p>
+              Right now I'm deep in systems architecture, automation, and local AI. I work daily with PHP, Python,
+              and Go, and tinker with game dev in Godot 4.5. My current obsession is a self-hosted{' '}
+              <span className="hl">"AI OS"</span> that runs fully on my own machine.
+            </p>
+            <p>
+              Off-screen I'm usually optimizing for the two things that matter: <strong>time</strong> and{' '}
+              <strong>understanding</strong>.
+            </p>
+            <div className="about-focus">
+              <span className="about-focus-label">Currently into</span>
+              <div className="about-focus-tags">
+                {focuses.map((f) => (
+                  <span className="tag" key={f}>{f}</span>
+                ))}
+              </div>
+            </div>
           </motion.div>
+
           <motion.div
-            className="about-stats"
+            className="about-side"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className="stat">
-              <motion.span
-                className="stat-num"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
-              >
-                4+
-              </motion.span>
-              <span>Projects Built</span>
-            </div>
-            <div className="stat">
-              <motion.span
-                className="stat-num"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ type: 'spring', stiffness: 200, delay: 0.45 }}
-              >
-                3+
-              </motion.span>
-              <span>Years Building</span>
-            </div>
-            <div className="stat">
-              <motion.span
-                className="stat-num"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ type: 'spring', stiffness: 200, delay: 0.6 }}
-              >
-                ∞
-              </motion.span>
-              <span>Curiosity</span>
-            </div>
+            <BorderGlow className="about-profile" backgroundColor="#1a1a28" borderRadius={20} glowRadius={22} colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}>
+              <div className="about-avatar">PR</div>
+              <div className="about-stats">
+                <div className="stat">
+                  <span className="stat-num">4+</span>
+                  <span>Projects</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-num">3+</span>
+                  <span>Years</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-num">∞</span>
+                  <span>Curiosity</span>
+                </div>
+              </div>
+            </BorderGlow>
           </motion.div>
         </div>
       </div>
