@@ -4,9 +4,9 @@ import '../components/ShinyText.css';
 import BorderGlow from '../components/BorderGlow';
 import '../components/BorderGlow.css';
 
-// Email obfuscated: base64 of "mailto:kerala.emperor2@gmail.com"
-const EMAIL_HREF = atob('bWFpbHRvOmtlcmFsYS5lbXBlcm9yMkBnbWFpbC5jb20=');
-const EMAIL_TEXT = atob('a2VyYWxhLmVtcGVyb3IyQGdtYWlsLmNvbQ==');
+// Email obfuscated: base64 of "mailto:rjs.raien@gmail.com"
+const EMAIL_HREF = atob('bWFpbHRvOnJqcy5yYWllbkBnbWFpbC5jb20=');
+const EMAIL_TEXT = atob('cmpzLnJhaWVuQGdtYWlsLmNvbQ==');
 
 export default function Contact() {
   return (

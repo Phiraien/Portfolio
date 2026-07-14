@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import Magnet from '../components/Magnet';
 import BorderGlow from '../components/BorderGlow';
 import '../components/BorderGlow.css';
 
@@ -10,15 +9,11 @@ const skills = [
   },
   {
     title: 'Frontend',
-    items: ['React', 'Next.js', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Canvas / JS'],
+    items: ['React', 'Next.js', 'Vite', 'Tailwind', 'Framer Motion'],
   },
   {
-    title: 'Backend & DB',
-    items: ['Node.js', 'REST APIs', 'Supabase', 'MySQL', 'Oracle', 'Git Bash'],
-  },
-  {
-    title: 'Tools & Other',
-    items: ['Git / GitHub', 'Godot 4.5', 'WSL', 'Linux', 'Docker Basics'],
+    title: 'Backend & Tools',
+    items: ['Supabase', 'MySQL', 'Oracle', 'REST APIs', 'Git', 'Godot', 'Linux'],
   },
 ];
 
@@ -37,17 +32,17 @@ export default function Skills() {
           {skills.map((cat, i) => (
             <motion.div
               key={cat.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <Magnet padding={60} magnetStrength={1.5} activeTransition="transform 0.2s ease-out" wrapperClassName="magnet-wrap">
-                <BorderGlow className="skill-cat" backgroundColor="#1a1a28" borderRadius={16} glowRadius={16} colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}>
-                  <h3>{cat.title}</h3>
-                  <ul>{cat.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                </BorderGlow>
-              </Magnet>
+              <BorderGlow className="skill-cat" backgroundColor="#1a1a28" borderRadius={16} glowRadius={16} colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}>
+                <h3>{cat.title}</h3>
+                <ul className="skill-pills">
+                  {cat.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </BorderGlow>
             </motion.div>
           ))}
         </div>

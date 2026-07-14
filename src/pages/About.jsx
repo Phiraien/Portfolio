@@ -19,9 +19,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p>Engineering student who learns by building things and breaking them. Every project, every failure — that's where the real lessons live. I don't just follow tutorials; I take things apart to understand how they work, then put them back together better.</p>
-            <p>Currently deep in systems, automation, and local AI deployment. Working daily with PHP, Python, Java, and Go — building web apps, designing databases (Oracle, MySQL), and tinkering with game dev in Godot 4.5. Always optimizing for two things: <strong>time</strong> and <strong>understanding</strong>.</p>
-            <p>My current obsession: building a personal AI OS — a local, private, self-hosted system that learns with me. Not because it's trendy, but because I want to understand exactly how the pieces fit together, from the database to the agent loop.</p>
+            <p>I'm an engineering student who learns by building things and breaking them. I don't follow tutorials — I take systems apart to see how they work, then rebuild them better.</p>
+            <p>Right now I'm deep in systems architecture, automation, and local AI. I work daily with PHP, Python, and Go, and tinker with game dev in Godot 4.5. My obsession is a self-hosted "AI OS" that runs fully on my own machine.</p>
+            <p>Off-screen I'm usually optimizing for the two things that matter: <strong>time</strong> and <strong>understanding</strong>.</p>
           </motion.div>
           <motion.div
             className="about-stats"
