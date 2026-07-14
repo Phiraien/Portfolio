@@ -4,6 +4,7 @@ import { AnimatePresence } from 'motion/react';
 import { lazy, Suspense } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ScrollProgress from './components/ScrollProgress';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <main>
         <Suspense fallback={null}>
