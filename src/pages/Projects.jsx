@@ -23,18 +23,6 @@ const projects = [
     url: 'https://github.com/Phiraien/go-programs',
   },
   {
-    title: 'OS Scheduling Algorithms',
-    desc: 'Implementation of operating system scheduling algorithms — FCFS, SJF, Round Robin, and Priority Scheduling — with performance comparison.',
-    tags: ['C', 'Algorithms', 'OS'],
-    url: 'https://github.com/Phiraien/OS-Scheduling-algos',
-  },
-  {
-    title: 'Java-Nomies',
-    desc: 'Collection of Java projects and exercises exploring object-oriented programming concepts through practical implementations.',
-    tags: ['Java', 'OOP'],
-    url: 'https://github.com/Phiraien/Java-Nomies',
-  },
-  {
     title: 'Biodata',
     desc: 'Personal biodata and resume website — clean HTML & CSS.',
     tags: ['HTML', 'CSS'],
