@@ -13,7 +13,6 @@ export default function Nav() {
   return (
     <nav>
       <div className="container nav-inner">
-        <NavLink to="/" className="logo" aria-label="Home">Phi Raien</NavLink>
         <ul className="nav-links">
           {links.map((l) => (
             <li key={l.to}>
