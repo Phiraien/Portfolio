@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import GradientText from '../components/GradientText';
 import '../components/GradientText.css';
+import Magnet from '../components/Magnet';
+import RotatingText from '../components/RotatingText';
 
 const roles = [
   'Engineering Student',
@@ -72,6 +74,21 @@ export default function Home() {
           </GradientText>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          style={{ marginBottom: 12 }}
+        >
+          <span className="hero-badge">
+            <RotatingText
+              texts={['Building things', 'Breaking things', 'Learning daily', 'Shipping fast']}
+              mainClassName="hero-rotate"
+              rotationInterval={2200}
+            />
+          </span>
+        </motion.div>
+
         <motion.p
           className="tagline typewriter-line"
           initial={{ opacity: 0 }}
@@ -113,8 +130,12 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.5 }}
         >
-          <a href="/Portfolio/projects" className="btn">View Projects</a>
-          <a href="/Portfolio/about" className="btn btn-outline">About Me</a>
+          <Magnet magnetStrength={2.5}>
+            <a href="/Portfolio/projects" className="btn">View Projects</a>
+          </Magnet>
+          <Magnet magnetStrength={2.5}>
+            <a href="/Portfolio/about" className="btn btn-outline">About Me</a>
+          </Magnet>
         </motion.div>
       </div>
     </section>

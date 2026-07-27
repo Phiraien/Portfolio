@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import TrueFocus from '../components/TrueFocus';
 
 const focuses = ['Systems', 'Local AI', 'Automation', 'Game Dev'];
 
@@ -37,9 +38,7 @@ export default function About() {
             <div className="about-focus">
               <span className="about-focus-label">Currently into</span>
               <div className="about-focus-tags">
-                {focuses.map((f) => (
-                  <span className="tag" key={f}>{f}</span>
-                ))}
+                <TrueFocus sentence={focuses.join(' ')} blurAmount={4} borderColor="#6b6bf0" glowColor="rgba(107,107,240,0.6)" animationDuration={0.6} pauseBetweenAnimations={1.4} />
               </div>
             </div>
           </motion.div>

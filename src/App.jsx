@@ -5,6 +5,8 @@ import { lazy, Suspense } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
+import Threads from './components/Threads';
+import Noise from './components/Noise';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -19,6 +21,10 @@ export default function App() {
   return (
     <>
       <ScrollProgress />
+      <div className="bg-fx" aria-hidden="true">
+        <Threads color={[0.42, 0.42, 0.94]} amplitude={1} distance={0} enableMouseInteraction />
+        <Noise />
+      </div>
       <Nav />
       <main>
         <Suspense fallback={null}>

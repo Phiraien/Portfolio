@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import BorderGlow from '../components/BorderGlow';
 import '../components/BorderGlow.css';
+import DecryptedText from '../components/DecryptedText';
 
 const skills = [
   {
@@ -26,7 +27,7 @@ export default function Skills() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Skills &amp; Tools
+          <DecryptedText text="Skills & Tools" animateOn="view" speed={40} />
         </motion.h2>
         <div className="skills-grid">
           {skills.map((cat, i) => (

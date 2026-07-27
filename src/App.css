@@ -517,6 +517,17 @@ button:focus-visible {
   .footer-inner { flex-direction: column; gap: 16px; }
 }
 
+/* ─── Global background effects ─── */
+.bg-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-fx .threads-container {
+  opacity: 0.5;
+}
+
 /* ─── Hero background grid ─── */
 .hero-bg-grid {
   position: fixed;
@@ -618,4 +629,52 @@ main {
 /* ─── Stat count animation ─── */
 .stat {
   overflow: hidden;
+}
+
+/* ─── Hero rotating badge ─── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.hero-rotate {
+  font-weight: 600;
+  color: var(--accent);
+}
+.hero-rotate-element {
+  transition: color 0.2s;
+}
+
+/* ─── TrueFocus (About) ─── */
+.about-focus .focus-container {
+  justify-content: flex-start;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+.about-focus .focus-word {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.about-focus .focus-frame {
+  border-radius: 8px;
+}
+
+/* ─── TiltedCard project thumb ─── */
+.project-card .tilted-card-figure {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.project-card .tilted-card-img {
+  border-radius: 12px;
+  object-fit: cover;
 }
