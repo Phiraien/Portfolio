@@ -100,7 +100,17 @@ export default function PMVikas() {
 
                       <div className="pmvikas-day-card">
                         <div className="pmvikas-day-header">
-                          <h4 className="pmvikas-title">{entry.title}</h4>
+                          <div>
+                            <h4 className="pmvikas-title">{entry.title}</h4>
+                            <div className="pmvikas-full-date">
+                              {new Date(entry.date + 'T00:00:00').toLocaleDateString('en-US', {
+                                weekday: 'short',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                              })}
+                            </div>
+                          </div>
                           {isToday && <span className="pmvikas-badge">Today</span>}
                         </div>
 
