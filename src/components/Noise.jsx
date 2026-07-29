@@ -5,7 +5,7 @@ const Noise = ({
   patternSize = 250,
   patternScaleX = 1,
   patternScaleY = 1,
-  patternRefreshInterval = 2,
+  patternRefreshInterval = 8,
   patternAlpha = 15
 }) => {
   const grainRef = useRef(null);
@@ -19,7 +19,8 @@ const Noise = ({
 
     let frame = 0;
     let animationId;
-    const canvasSize = 1024;
+    const canvasSize = 512;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const resize = () => {
       if (!canvas) return;
@@ -55,6 +56,13 @@ const Noise = ({
 
     window.addEventListener('resize', resize);
     resize();
+    if (reduceMotion) {
+      drawGrain();
+      return () => {
+        window.removeEventListener('resize', resize);
+        window.cancelAnimationFrame(animationId);
+      };
+    }
     loop();
 
     return () => {

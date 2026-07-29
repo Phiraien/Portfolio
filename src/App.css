@@ -525,7 +525,7 @@ button:focus-visible {
   pointer-events: none;
 }
 .bg-fx .threads-container {
-  opacity: 0.5;
+  opacity: 0.72;
 }
 
 /* ─── Hero background grid ─── */
@@ -586,44 +586,151 @@ main {
   border-radius: 4px;
   color: var(--accent);
 }
-.pmvikas-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 720px;
+.pmvikas-calendar-months {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 860px;
   margin: 0 auto;
 }
-.pmvikas-card {
+.pmvikas-month-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.pmvikas-month-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 999px;
+}
+.pmvikas-timeline {
+  position: relative;
+  padding-left: 38px;
+  margin-top: 24px;
+}
+.pmvikas-timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 14px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+  border-radius: 2px;
+}
+.pmvikas-day {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.pmvikas-day:last-child {
+  margin-bottom: 0;
+}
+.pmvikas-day-marker {
+  position: absolute;
+  left: -29px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 38px;
+}
+.pmvikas-day-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 3px rgba(107, 107, 240, 0.15);
+}
+.pmvikas-day--today .pmvikas-day-dot {
+  background: var(--accent);
+}
+.pmvikas-day-date {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  font-family: monospace;
+  min-width: 18px;
+}
+.pmvikas-day--today .pmvikas-day-date {
+  color: var(--accent);
+  font-weight: 700;
+}
+.pmvikas-day-card {
+  flex: 1;
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 28px;
+  padding: 18px 20px;
   border: 1px solid var(--border);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-.pmvikas-card:hover {
+.pmvikas-day-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(107, 107, 240, 0.08);
+  box-shadow: 0 0 22px rgba(107, 107, 240, 0.08);
+  transform: translateY(-1px);
 }
-.pmvikas-date {
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  font-family: monospace;
+.pmvikas-day-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 8px;
 }
 .pmvikas-title {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 12px;
+  margin: 0;
+}
+.pmvikas-badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(107, 107, 240, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(107, 107, 240, 0.25);
 }
 .pmvikas-content p {
   color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 10px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0 0 8px;
+}
+.pmvikas-content p:last-child {
+  margin-bottom: 0;
 }
 .pmvikas-tags {
-  margin-top: 14px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .pmvikas-calendar-months {
+    gap: 36px;
+  }
+  .pmvikas-timeline {
+    padding-left: 26px;
+  }
+  .pmvikas-timeline::before {
+    left: 9px;
+  }
+  .pmvikas-day-marker {
+    left: -21px;
+    width: 28px;
+  }
+  .pmvikas-day {
+    gap: 12px;
+  }
 }
 
 /* ─── Stat count animation ─── */
@@ -666,15 +773,4 @@ main {
 }
 .about-focus .focus-frame {
   border-radius: 8px;
-}
-
-/* ─── TiltedCard project thumb ─── */
-.project-card .tilted-card-figure {
-  margin-bottom: 16px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.project-card .tilted-card-img {
-  border-radius: 12px;
-  object-fit: cover;
 }

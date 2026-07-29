@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import GradientText from '../components/GradientText';
 import '../components/GradientText.css';
-import Magnet from '../components/Magnet';
 import RotatingText from '../components/RotatingText';
 
 const roles = [
@@ -130,12 +129,8 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.5 }}
         >
-          <Magnet magnetStrength={2.5}>
-            <a href="/Portfolio/projects" className="btn">View Projects</a>
-          </Magnet>
-          <Magnet magnetStrength={2.5}>
-            <a href="/Portfolio/about" className="btn btn-outline">About Me</a>
-          </Magnet>
+          <a href="/Portfolio/projects" className="btn">View Projects</a>
+          <a href="/Portfolio/about" className="btn btn-outline">About Me</a>
         </motion.div>
       </div>
     </section>
