@@ -1,8 +1,7 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { animate, useMotionValue, useMotionValueEvent } from 'motion/react';
 
 export default function LoadingScreen({ onComplete }) {
-  const ref = useRef(null);
   const motionValue = useMotionValue(0);
   const [display, setDisplay] = useState('0');
 
@@ -11,15 +10,49 @@ export default function LoadingScreen({ onComplete }) {
   });
 
   useEffect(() => {
-    const controls = animate(motionValue, 100, {
-      duration: 1.2,
-      ease: 'easeOut',
-      onComplete: () => {
-        setTimeout(() => onComplete(), 400);
-      },
-    });
-    return () => controls.stop();
-  }, []);
+    let raf;
+    let finished = false;
+
+    // Real progress: completed resources / all resources seen so far
+    const measure = () => {
+      const entries = performance.getEntriesByType('resource');
+      const done = entries.filter((e) => e.responseEnd > 0).length;
+      return entries.length > 0 ? done / entries.length : 0.15;
+    };
+
+    // Drive counter toward real progress, capped at 90 until fully loaded
+    const tick = () => {
+      if (finished) return;
+      const real = measure() * 100;
+      const target = Math.min(90, Math.max(motionValue.get(), real));
+      motionValue.set(target);
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    // Everything actually loaded (all assets + fonts) — complete to 100
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      cancelAnimationFrame(raf);
+      animate(motionValue, 100, {
+        duration: 0.4,
+        ease: 'easeOut',
+        onComplete: () => setTimeout(onComplete, 200),
+      });
+    };
+
+    if (document.readyState === 'complete') {
+      finish();
+    } else {
+      window.addEventListener('load', finish, { once: true });
+    }
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('load', finish);
+    };
+  }, [motionValue, onComplete]);
 
   return (
     <div
@@ -36,7 +69,6 @@ export default function LoadingScreen({ onComplete }) {
       }}
     >
       <span
-        ref={ref}
         style={{
           fontSize: '5rem',
           fontWeight: 700,
