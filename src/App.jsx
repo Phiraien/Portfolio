@@ -1,12 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
-import Threads from './components/Threads';
 import Noise from './components/Noise';
+import Particles from './components/Particles';
+import LoadingScreen from './components/LoadingScreen';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -17,12 +18,15 @@ const Contact = lazy(() => import('./pages/Contact'));
 
 export default function App() {
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  if (loading) return <LoadingScreen onComplete={() => setLoading(false)} />;
 
   return (
     <>
       <ScrollProgress />
       <div className="bg-fx" aria-hidden="true">
-        <Threads color={[0.42, 0.42, 0.94]} amplitude={1} distance={0} enableMouseInteraction />
+        <Particles />
         <Noise />
       </div>
       <Nav />

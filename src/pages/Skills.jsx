@@ -38,7 +38,7 @@ export default function Skills() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <BorderGlow className="skill-cat" backgroundColor="#1a1a28" borderRadius={16} glowRadius={16} colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}>
+              <BorderGlow className="skill-cat" backgroundColor="#111111" borderRadius={16} glowRadius={16} colors={['#22d3ee', '#a5f3fc', '#22d3ee']}>
                 <h3>{cat.title}</h3>
                 <ul className="skill-pills">
                   {cat.items.map((item) => <li key={item}>{item}</li>)}

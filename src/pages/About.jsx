@@ -38,7 +38,7 @@ export default function About() {
             <div className="about-focus">
               <span className="about-focus-label">Currently into</span>
               <div className="about-focus-tags">
-                <TrueFocus sentence={focuses.join(' ')} blurAmount={4} borderColor="#6b6bf0" glowColor="rgba(107,107,240,0.6)" animationDuration={0.6} pauseBetweenAnimations={1.4} />
+                <TrueFocus sentence={focuses.join(' ')} blurAmount={4} borderColor="#22d3ee" glowColor="rgba(34,211,238,0.6)" animationDuration={0.6} pauseBetweenAnimations={1.4} />
               </div>
             </div>
           </motion.div>

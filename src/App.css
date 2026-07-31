@@ -6,16 +6,16 @@
 }
 
 :root {
-  --accent: #6b6bf0;
-  --accent-hover: #7d7df5;
+  --accent: #22d3ee;
+  --accent-hover: #67e8f9;
   --text: #e8e8f0;
   --text-muted: #b0b0c0;
   --text-dim: #8888a0;
-  --bg: #120F17;
-  --card-bg: #1a1a28;
-  --nav-bg: rgba(18, 15, 23, 0.92);
-  --border: #2a2a3a;
-  --tag-bg: #2a2a4a;
+  --bg: #000000;
+  --card-bg: #111111;
+  --nav-bg: rgba(0, 0, 0, 0.92);
+  --border: #222222;
+  --tag-bg: #1a1a1a;
   --shadow: rgba(0, 0, 0, 0.3);
 }
 
@@ -134,12 +134,6 @@ nav {
   gap: 20px;
   justify-content: center;
 }
-.contact-card {
-  display: inline-block;
-  padding: 36px 48px;
-  border-radius: 16px;
-  margin-top: 8px;
-}
 .project-card-wrap {
   border-radius: 16px;
 }
@@ -149,6 +143,15 @@ nav {
   font-weight: 600;
   margin-bottom: 8px;
 }
+.sub {
+  color: var(--text-dim);
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sub {
   color: var(--text-dim);
   font-size: 1.15rem;
@@ -189,6 +192,13 @@ nav {
   color: #fff;
 }
 
+.contact-card {
+  display: inline-block;
+  padding: 36px 48px;
+  border-radius: 16px;
+  margin-top: 8px;
+}
+
 /* Sections */
 h2 {
   font-size: 2.25rem;
@@ -215,7 +225,7 @@ h2 {
 }
 .about-text .hl {
   color: var(--text);
-  background: linear-gradient(120deg, #6b6bf0, #ff9ffc);
+  background: linear-gradient(120deg, #22d3ee, #a5f3fc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -261,7 +271,7 @@ h2 {
 .stat-num {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(120deg, #6b6bf0, #ff9ffc);
+  background: linear-gradient(120deg, #22d3ee, #a5f3fc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -535,8 +545,8 @@ button:focus-visible {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(107, 107, 240, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107, 107, 240, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .page-hero > .container,
@@ -649,7 +659,7 @@ main {
   border-radius: 50%;
   background: var(--card-bg);
   border: 2px solid var(--accent);
-  box-shadow: 0 0 0 3px rgba(107, 107, 240, 0.15);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
 }
 .pmvikas-day--today .pmvikas-day-dot {
   background: var(--accent);
@@ -676,7 +686,7 @@ main {
 }
 .pmvikas-day-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 22px rgba(107, 107, 240, 0.08);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.08);
   transform: translateY(-1px);
 }
 .pmvikas-day-header {
@@ -698,9 +708,9 @@ main {
   letter-spacing: 0.08em;
   padding: 3px 8px;
   border-radius: 999px;
-  background: rgba(107, 107, 240, 0.12);
+  background: rgba(34, 211, 238, 0.12);
   color: var(--accent);
-  border: 1px solid rgba(107, 107, 240, 0.25);
+  border: 1px solid rgba(34, 211, 238, 0.25);
 }
 .pmvikas-full-date {
   font-size: 0.8rem;

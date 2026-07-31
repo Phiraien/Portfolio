@@ -64,7 +64,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         >
           <GradientText
-            colors={['#6b6bf0', '#ff9ffc', '#6b6bf0']}
+            colors={['#22d3ee', '#a5f3fc', '#22d3ee']}
             animationSpeed={6}
             direction="horizontal"
             className="hero-name"
