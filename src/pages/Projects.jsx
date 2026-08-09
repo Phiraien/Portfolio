@@ -5,6 +5,12 @@ import '../components/BorderGlow.css';
 
 const projects = [
   {
+    title: 'PMVikas Mini Project',
+    desc: 'IoT-based mini project developed as part of the PM-VIKAS IoT Assistant Training Program — integrating sensors, ESP32, and cloud telemetry (ThingSpeak/Blynk) for smart-home automation.',
+    tags: ['IoT', 'ESP32', 'Arduino', 'ThingSpeak'],
+    url: 'https://github.com/Phiraien/miniproject_pmvikas',
+  },
+  {
     title: 'FileSync',
     desc: 'Premium dark-themed cloud file manager with drag & drop uploads, Supabase auth, and Framer Motion animations. Built with Next.js, Tailwind CSS v4.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind'],
