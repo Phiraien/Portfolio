@@ -143,6 +143,132 @@ const pmvikasEntries = [
       "Explored Application Layer protocols including HTTP, HTTPS, FTP, and DNS. Discussed client-server architectures and peer-to-peer networks.",
     tags: ["http", "https", "ftp", "dns", "application-layer"],
   },
+  {
+    date: "2026-07-15",
+    title: "Wednesday, July 15, 2026 — Week 3: Computer Networking - Network Security",
+    content:
+      "Introduction to network security. Covered basic cryptography, firewalls, VPNs, and common network vulnerabilities and attacks.",
+    tags: ["network-security", "cryptography", "firewalls", "vpn"],
+  },
+  {
+    date: "2026-07-16",
+    title: "Thursday, July 16, 2026 — Industry Institution Interactive Meet (BOAT)",
+    content:
+      "Participated in an Industry Institution Interactive Meet to discuss real-world engineering challenges, industry expectations, and collaborative opportunities.",
+    tags: ["industry-meet", "interactive"],
+  },
+  {
+    date: "2026-07-17",
+    title: "Friday, July 17, 2026 — Week 4: Cloud Computing - Introduction",
+    content:
+      "Began Cloud Computing module. Discussed the evolution of cloud technology, virtualization concepts, and hypervisors.",
+    tags: ["cloud-computing", "virtualization", "hypervisors"],
+  },
+  {
+    date: "2026-07-20",
+    title: "Monday, July 20, 2026 — Week 4: Cloud Computing - Service Models",
+    content:
+      "Detailed analysis of Cloud Service Models: Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).",
+    tags: ["iaas", "paas", "saas", "cloud-service-models"],
+  },
+  {
+    date: "2026-07-21",
+    title: "Tuesday, July 21, 2026 — Week 4: Cloud Computing - Deployment Models",
+    content:
+      "Explored Cloud Deployment Models: Public, Private, Hybrid, and Community clouds. Discussed use cases and security implications for each.",
+    tags: ["public-cloud", "private-cloud", "hybrid-cloud", "community-cloud"],
+  },
+  {
+    date: "2026-07-22",
+    title: "Wednesday, July 22, 2026 — Week 4: Cloud Computing - Major Cloud Providers",
+    content:
+      "Overview of major cloud service providers (AWS, Microsoft Azure, Google Cloud). Discussed core compute, storage, and networking services.",
+    tags: ["aws", "azure", "gcp", "cloud-providers"],
+  },
+  {
+    date: "2026-07-23",
+    title: "Thursday, July 23, 2026 — Week 4: Cloud Computing - Cloud Storage & Databases",
+    content:
+      "Deep dive into cloud storage solutions (Object, Block, File storage) and managed databases (Relational and NoSQL) in the cloud.",
+    tags: ["cloud-storage", "nosql", "relational-db"],
+  },
+  {
+    date: "2026-07-24",
+    title: "Friday, July 24, 2026 — Week 4: Cloud Computing - Cloud Security & Architecture",
+    content:
+      "Discussed cloud security best practices, Identity and Access Management (IAM), and designing highly available, fault-tolerant architectures.",
+    tags: ["cloud-security", "iam", "architecture"],
+  },
+  {
+    date: "2026-07-27",
+    title: "Monday, July 27, 2026 — Week 5: IoT - Basic Building Blocks",
+    content:
+      "Started Internet of Things (IoT) module. Explored the basic building blocks of IoT: Sensors, Networks, Processors, and Actuators.",
+    tags: ["iot", "sensors", "actuators"],
+  },
+  {
+    date: "2026-07-28",
+    title: "Tuesday, July 28, 2026 — Week 5: IoT - Subsets of IoT Domain",
+    content:
+      "Discussed various subsets of the IoT Domain: Industrial IoT (IIoT), Consumer IoT (CIoT), Social IoT (SIoT), and Semantic IoT. Introduced Industry 4.0 concepts.",
+    tags: ["iiot", "ciot", "siot", "industry-4-0"],
+  },
+  {
+    date: "2026-07-29",
+    title: "Wednesday, July 29, 2026 — Week 5: IoT - Classes and Types of Sensors",
+    content:
+      "Detailed study of sensor classification (Analog/Digital, Scalar/Vector). Explored various sensor types: Light, Touch, Humidity, Temperature, Force, and Ultrasonic.",
+    tags: ["sensors", "temperature", "humidity", "ultrasonic"],
+  },
+  {
+    date: "2026-07-30",
+    title: "Thursday, July 30, 2026 — Week 5: IoT - Sensor Applications & Case Studies",
+    content:
+      "Analyzed real-world sensor applications. Discussed solving problems like automated waste classification and detecting cracks to prevent railway accidents.",
+    tags: ["sensor-applications", "case-studies"],
+  },
+  {
+    date: "2026-07-31",
+    title: "Friday, July 31, 2026 — Week 5: IoT - IoT Network Protocols",
+    content:
+      "Explored communication protocols specific to IoT, including MQTT, CoAP, Zigbee, and Bluetooth Low Energy (BLE).",
+    tags: ["mqtt", "coap", "zigbee", "ble"],
+  },
+  {
+    date: "2026-08-03",
+    title: "Monday, August 3, 2026 — Week 5: IoT - Cloud Integration & Edge Computing",
+    content:
+      "Discussed integrating IoT devices with cloud platforms for data analytics. Introduced Edge Computing to process data closer to the source.",
+    tags: ["edge-computing", "cloud-integration"],
+  },
+  {
+    date: "2026-08-04",
+    title: "Tuesday, August 4, 2026 — Week 5: IoT - Arduino IoT Projects",
+    content:
+      "Hands-on session using Arduino to build a basic IoT node. Interfaced temperature and humidity sensors and transmitted data via serial communication.",
+    tags: ["arduino", "temp-humidity-sensor", "iot-node"],
+  },
+  {
+    date: "2026-08-05",
+    title: "Wednesday, August 5, 2026 — Week 5: IoT - Advanced IoT Interfacing",
+    content:
+      "Continued project work. Added actuators (relays, motors) to the IoT system to take physical actions based on sensor data thresholds.",
+    tags: ["relays", "motors", "actuator-control"],
+  },
+  {
+    date: "2026-08-06",
+    title: "Thursday, August 6, 2026 — Week 5: IoT - System Testing & Troubleshooting",
+    content:
+      "Final testing and troubleshooting of the assembled IoT systems. Discussed common points of failure in hardware and network connections.",
+    tags: ["troubleshooting", "testing"],
+  },
+  {
+    date: "2026-08-07",
+    title: "Friday, August 7, 2026 — Project Presentation",
+    content:
+      "Final day of the program. Presented the completed internship projects, demonstrating the integration of embedded systems, networking, cloud, and IoT concepts.",
+    tags: ["project-presentation", "presentation"],
+  },
 ];
 
 export default pmvikasEntries;
