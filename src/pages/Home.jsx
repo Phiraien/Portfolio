@@ -69,7 +69,7 @@ export default function Home() {
             direction="horizontal"
             className="hero-name"
           >
-            Phi Raien
+            Rohan Joseph Sam
           </GradientText>
         </motion.div>
 
