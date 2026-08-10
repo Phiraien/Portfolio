@@ -49,7 +49,7 @@ const pmvikasEntries = [
     date: "2026-06-25",
     title: "Thursday, June 25, 2026 — Week 1: Electronics - SOP & Logic Representation",
     content:
-      "Studied Sum of Products (SOP) form, Minterms, and Maxterms. Practiced synthesizing processes based on truth tables to draw logic diagrams.",
+      "Studied Sum of Products (SOP) form, Mintererms, and Maxterms. Practiced synthesizing processes based on truth tables to draw logic diagrams.",
     tags: ["sop", "logic-representation"],
   },
   {
@@ -72,6 +72,76 @@ const pmvikasEntries = [
     content:
       "Designed and analyzed Combinational Circuits including Half Adders, Full Adders, Half Subtractors, and Full Subtractors.",
     tags: ["embedded", "adders", "combinational-circuits"],
+  },
+  {
+    date: "2026-07-01",
+    title: "Wednesday, July 1, 2026 — Week 2: Embedded Systems - Multiplexers & Encoders",
+    content:
+      "Continued with Combinational Logic: Multiplexers, Demultiplexers, Encoders, and Decoders. Discussed Synchronous vs. Asynchronous Sequential Circuits.",
+    tags: ["embedded", "mux", "encoders", "decoders"],
+  },
+  {
+    date: "2026-07-02",
+    title: "Thursday, July 2, 2026 — Week 2: Embedded Systems - Microprocessor Architecture",
+    content:
+      "Introduction to Microprocessors. Covered the architecture of the 8085 microprocessor, memory interleaving, and basic 8085 instructions.",
+    tags: ["microprocessor", "8085", "architecture"],
+  },
+  {
+    date: "2026-07-03",
+    title: "Friday, July 3, 2026 — Week 2: Embedded Systems - Microcontrollers (8051 vs ARM)",
+    content:
+      "Compared microcontroller architectures: 8051 (16-bit) vs ARM (32-bit). Discussed data transfer ports, address matching, and peripheral devices.",
+    tags: ["microcontroller", "8051", "arm", "embedded"],
+  },
+  {
+    date: "2026-07-06",
+    title: "Monday, July 6, 2026 — Week 2: Embedded Systems - Instruction Sets & Programming",
+    content:
+      "Explored machine control, branch, logic, and arithmetic instructions for microprocessors. Discussed Opcode and Operand structures.",
+    tags: ["instruction-set", "programming", "opcode"],
+  },
+  {
+    date: "2026-07-07",
+    title: "Tuesday, July 7, 2026 — Week 2: Embedded Systems - Arduino Platform",
+    content:
+      "Introduction to Arduino. Discussed Arduino architecture, IDE setup, and wrote basic programs to interface with external LEDs and switches.",
+    tags: ["arduino", "hardware", "led"],
+  },
+  {
+    date: "2026-07-08",
+    title: "Wednesday, July 8, 2026 — Week 3: Computer Networking - Fundamentals",
+    content:
+      "Started Computer Networking module. Covered basic network topologies, transmission media, and the OSI Reference Model.",
+    tags: ["networking", "osi-model", "topologies"],
+  },
+  {
+    date: "2026-07-09",
+    title: "Thursday, July 9, 2026 — Week 3: Computer Networking - Network Types",
+    content:
+      "Detailed discussion on Personal Area Networks (PAN), Local Area Networks (LAN), and Wide Area Networks (WAN). Explored networking hardware (Routers, Switches).",
+    tags: ["pan", "lan", "wan", "network-hardware"],
+  },
+  {
+    date: "2026-07-10",
+    title: "Friday, July 10, 2026 — Week 3: Computer Networking - TCP/IP Protocol Suite",
+    content:
+      "Deep dive into the TCP/IP protocol suite. Discussed IP addressing (IPv4 vs IPv6), subnetting, and routing principles.",
+    tags: ["tcp-ip", "ipv4", "ipv6", "subnetting"],
+  },
+  {
+    date: "2026-07-13",
+    title: "Monday, July 13, 2026 — Week 3: Computer Networking - Transport Layer",
+    content:
+      "Analyzed Transport Layer protocols: TCP and UDP. Discussed connection-oriented vs connectionless communication, ports, and sockets.",
+    tags: ["tcp", "udp", "transport-layer", "sockets"],
+  },
+  {
+    date: "2026-07-14",
+    title: "Tuesday, July 14, 2026 — Week 3: Computer Networking - Application Layer",
+    content:
+      "Explored Application Layer protocols including HTTP, HTTPS, FTP, and DNS. Discussed client-server architectures and peer-to-peer networks.",
+    tags: ["http", "https", "ftp", "dns", "application-layer"],
   },
 ];
 
